@@ -1,0 +1,31 @@
+
+"""Add Email Notification to Jenkins Pipeline
+Open your pipeline job.
+
+Add a post section to your pipeline script for sending emails. Example:"""
+
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+    }
+    post {
+        always {
+            emailext attachLog: true,
+                subject: "'${currentBuild.result}' Build Notification",
+                body: """
+                    Project: ${env.JOB_NAME}<br/>
+                    Build Number: ${env.BUILD_NUMBER}<br/>
+                    Build Status: ${currentBuild.result}<br/>
+                    URL: ${env.BUILD_URL}
+                """,
+                to: 'swatijaiswal90090@gmail.com',
+                attachmentsPattern: 'trivyfs.txt,trivyimage.txt'
+        }
+    }
+}
+
