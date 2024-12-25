@@ -30,7 +30,7 @@ ssh -i <path-to-your-key>.pem ubuntu@<public-ip-of-instance>
 
 
 Step 2:
-Install Jenkins
+## Install Jenkins
 sudo vi jenkins.sh
 
 #!/bin/bash
@@ -54,7 +54,7 @@ sudo chmod 777 jenkins.sh
 ./jenkins.sh
 
 
-Install Docker
+## Install Docker
 sudo apt-get update
 sudo apt-get install docker.io -y
 sudo usermod -aG docker $USER  # Replace $USER with your username (e.g., ubuntu)
@@ -62,7 +62,7 @@ newgrp docker
 sudo chmod 777 /var/run/docker.sock
 
 
-Install Trivy
+## Install Trivy
 sudo vi trivy.sh
 
 #!/bin/bash
@@ -100,7 +100,7 @@ Click on submit and you will get your API key.
 If TMDB is not working then
 check other alternative of TMDB API Key and use it
 
-Step 4:
+## Step 4:
 Install Prometheus
 sudo useradd --system --no-create-home --shell /bin/false prometheus
 
@@ -144,7 +144,7 @@ sudo systemctl status prometheus
 Access Prometheus:
 Open http://<server-ip>:9090 in your browser.
 
-Install Node Exporter
+## Install Node Exporter
 sudo useradd --system --no-create-home --shell /bin/false node_exporter
 
 wget https://github.com/prometheus/node_exporter/releases/download/v1.6.1/node_exporter-1.6.1.linux-amd64.tar.gz
@@ -183,7 +183,7 @@ sudo vim /etc/prometheus/prometheus.yml
 curl -X POST http://localhost:9090/-/reload
 
 
-Install Grafana
+## Install Grafana
 sudo apt-get install -y apt-transport-https software-properties-common
 wget -q -O - https://packages.grafana.com/gpg.key | sudo apt-key add -
 echo "deb https://packages.grafana.com/oss/deb stable main" | sudo tee /etc/apt/sources.list.d/grafana.list
