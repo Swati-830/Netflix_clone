@@ -22,7 +22,6 @@ Step 14 — Terminate the AWS EC2 Instances.
 
 Step 1: 
 Launch an Ubuntu(22.04) T2 Large Instance
-Launch an Ubuntu(22.04) T2 Large Instance
 Launch an AWS T2 Large Instance. Use the image as Ubuntu. You can create a new key pair or use an existing one. Enable HTTP and HTTPS settings in the Security Group and open all ports (not best case to open all ports but just for learning purposes it's okay).
 
 
@@ -201,7 +200,7 @@ Username: admin
 Password: admin
 
 
-Add Prometheus as a data source:                       
+## Add Prometheus as a data source:                       
 
 Go to Settings > Data Sources > Add data source.
 Select Prometheus and enter http://localhost:9090.
@@ -212,7 +211,7 @@ Use Dashboard ID 1860.
 Select the Prometheus data source and import it.
 
 
-Step 5:
+## Step 5:
 A} Install Prometheus Plugin in Jenkins
 
 Ensure Jenkins is running.
@@ -327,7 +326,7 @@ F}
 Open your pipeline job.
 
 Add a post section to your pipeline script for sending emails. Example:
-  ****************Run jenkinsfile************
+  *********************Run jenkinsfile***********************
 
 Step 7:
 A}
@@ -371,23 +370,7 @@ Optionally, enable Global npm packages to install and specify additional package
 Click Apply and Save.
 
 
-Create a New Pipeline Job
-1. Create a New Job
-Go to Jenkins’ dashboard.
-Click New Item.
-Enter the job name (e.g., Netflix).
-Select Pipeline as the job type.
-Click OK.
-2. Configure the Pipeline Job
-In the job configuration screen:
-Add a description for your job (e.g., "Pipeline to test and build Netflix project").
-Scroll down to the Pipeline section:
-Select Pipeline script from SCM (if you have a Git repository for the project).
-Otherwise, select Pipeline script and write the Jenkins pipeline script directly.
-Click Apply and Save.
-
-
-Step 8:
+## Step 8:
 A}Configure SonarQube Server in Jenkins
 
 A.
@@ -446,7 +429,7 @@ In the pipeline configuration page:
 Under the Pipeline section, select Pipeline script.
 Paste the following declarative pipeline script:
 
-***** Run jenkinsfile1*******
+***** Run jenkinsfile01 *****
 
 C}
 Run the Pipeline
@@ -507,6 +490,7 @@ Modify the Pipeline Script:
 Add the following stages to your pipeline script:
 
 
+
 """
 stage('OWASP FS SCAN') {
     steps {
@@ -522,6 +506,7 @@ stage('TRIVY FS SCAN') {
 }
 
 """
+
 
 D}
 Build and Review Results
