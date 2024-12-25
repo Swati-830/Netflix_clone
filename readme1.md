@@ -1,31 +1,6 @@
 info 
 
-
-
-
-3.99.180.221
-
-jenkins  8080
-a0d4c6ec56184e9b9482cf92b76449bd
-Swati
-Swati@29
-
-sonaraube  9000
-tush
-
-
-prometheus  9090
-
-
-
-Grafan pass  3000
-admin
-tush
-
-
-app password  yghd wsty gdam ekuy
-
- token     squ_51bbf2421946d52beee2b31ff1c1a93e33358aa5
+token    squ_762c77d59a5de3f60902c39eb5887cc79d150ab9
 
 
 
@@ -33,8 +8,7 @@ app password  yghd wsty gdam ekuy
 
 
 
-
- Step 1: Update Package Index
+Step 1: Update Package Index
 First, ensure your package index is up-to-date by running the following command:
 
 sh

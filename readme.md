@@ -57,7 +57,7 @@ sudo chmod 777 jenkins.sh
 ## Install Docker
 sudo apt-get update
 sudo apt-get install docker.io -y
-sudo usermod -aG docker $USER  # Replace $USER with your username (e.g., ubuntu)
+sudo usermod -aG docker $USER  
 newgrp docker
 sudo chmod 777 /var/run/docker.sock
 
