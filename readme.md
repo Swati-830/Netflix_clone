@@ -291,7 +291,7 @@ Set the SMTP Server Details:
 
 SMTP Server: smtp.gmail.com
 Use SMTP Authentication: ✅ (Checked)
-User Name: Your Gmail address (e.g., youremail@gmail.com)
+User Name: Your Gmail address (e.g., swatijaiswal90090@gmail.com)
 Password: Paste the App Password generated earlier.
 Check Use SSL.
 SMTP Port: 465.
@@ -404,7 +404,7 @@ Name: sonar-server (or any other name you prefer).
 Server URL: http://<EC2-Public-IP>:9000 (replace <EC2-Public-IP> with the actual public IP).
 Authentication Token: Select the Sonar-token credential you added earlier.
 Click Apply and Save.
-
+11
 D.
 Add SonarQube Quality Gate
 Go to SonarQube Dashboard → Administration → Configuration → Webhooks.
